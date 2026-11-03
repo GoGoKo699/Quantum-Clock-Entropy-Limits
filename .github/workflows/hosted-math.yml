@@ -1,0 +1,44 @@
+name: Hosted mathematical rendering
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      SOURCE_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ env.SOURCE_SHA }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install isolated rendering dependencies
+        run: |
+          npm install --prefix "$RUNNER_TEMP/hosted-deps" --no-audit --no-fund playwright@1.56.1 mathjax-full@3.2.1
+          "$RUNNER_TEMP/hosted-deps/node_modules/.bin/playwright" install --with-deps chromium
+      - name: Inspect the exact hosted source
+        env:
+          NODE_PATH: ${{ runner.temp }}/hosted-deps/node_modules
+        run: |
+          node verification/hosted/capture_hosted_math.cjs \
+            --root "$GITHUB_WORKSPACE" \
+            --repository "$GITHUB_REPOSITORY" \
+            --revision "$SOURCE_SHA" \
+            --output "$RUNNER_TEMP/hosted-capture" \
+            --contract verification/hosted/contract.json
+      - name: Preserve the report and captures
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: hosted-math-${{ env.SOURCE_SHA }}
+          path: ${{ runner.temp }}/hosted-capture
+          if-no-files-found: error
+          retention-days: 30

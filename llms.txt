@@ -1,0 +1,38 @@
+# Quantum Clock Entropy Limits
+
+> Dimension-independent precision limits and logarithmic affinity cost for a quantum clock with one complete rank-one reset interface.
+
+## Start here
+
+- [Overview](README.md): question, principal bounds, scope and reading routes.
+- [Model](science/model.md): the exact dynamics, signed-count observable, operating sector and optimization convention. Read this before transferring a result to another architecture.
+
+## Scientific story
+
+- [Precision bound](science/precision_bound.md): no-count stability, integrated endpoint reciprocity, accretive-resolvent compression and the renewal-reward variance bound.
+- [Finite-bias construction](science/achievability.md): an explicit bounded-strength chain, the ideal Erlang escape law, killed-evolution stability and uniform finite-reverse-rate control.
+- [Extensions and boundaries](science/extensions.md): stable unital inter-tick dynamics, coincident or disconnected endpoints, dark components, retained memory and alternative estimators.
+- [Thermodynamic interface](science/thermodynamic_interface.md): local detailed balance, the serial two-temperature reset path, the bounded-boundary entropy identity and microscopic approximation limits.
+
+## Study route
+
+- [Selected source and bridge](learning/anchor.md): Wiseman and Milburn, Quantum Measurement and Control (2010); relevant sections, local notation and the missing steps to this project.
+- [Milestone map](learning/milestones.md): exactly M01–M30, organized into background/preliminaries and narrative/innovation, with dependencies and canonical source pointers.
+- [Connected tutorial](learning/tutorial.md): explanations and a worked example following the settled milestone map. The map is shared scientific material and does not encode a reader's progress.
+
+## Attribution and reproduction
+
+- [Related work](references/related_work.md): what is inherited and what the affinity-only converse and finite-bias argument add, with model-level comparisons.
+- [Sources](references/README.md): bibliographic identities and source scope.
+- [Structured sources](references/sources.json): machine-readable bibliographic records.
+- [Verification guide](verification/README.md): commands, numerical conventions, covered cases and limits.
+- [Calculation code](verification/run_checks.py) and [recorded results](verification/results.json): tilted-generator and independent block-moment checks, absorption constraints and exact rational characteristic identities.
+
+## Essential distinctions
+
+- The baseline has one counted reverse-paired reset interface. Each jump resets the entire participating clockwork. A retained ancilla or multiple reset pairs changes the model.
+- The output is the signed unit count N = N+ − N−. Precision is the current divided by the variance growth rate; that rate contains no factor of two. It is not an optimum over all estimators of the detection record.
+- Sigma is the logarithm of the jump-rate ratio. Its interpretation as physical entropy per net tick requires the stated tightly coupled implementation. Unital noise is not declared thermodynamically free.
+- The long-time limit is taken at each fixed finite dimension. The cost law has no fixed-rate requirement; the construction slows as dimension grows at fixed dynamical strength.
+- The exponential advantage and ideal exceptional-point escape mechanism are credited to their antecedents. The logarithmic-order bounds do not identify the optimal coefficient.
+- Analytical proofs support the general statements. Finite calculations check their implementation and do not establish a universal theorem or a microscopic elimination error bound.

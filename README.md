@@ -57,9 +57,16 @@ The exponential quantum precision advantage was demonstrated by [Meier et al.](r
 | Which noise and boundary cases are covered? | [Extensions and boundaries](science/extensions.md) |
 | When is affinity physical entropy? | [Thermodynamic interface](science/thermodynamic_interface.md) |
 | What is inherited, and what is added? | [Related work](references/related_work.md) and [sources](references/README.md) |
+| How can I build the prerequisites and follow the argument? | [Learning bridge](learning/anchor.md), [tutorial](learning/tutorial.md) and [30 milestones](learning/milestones.md) |
 | How can the calculations be reproduced? | [Verification](verification/README.md) |
 
 The proof combines a two-port absorption constraint with a renewal-reward calculation. It keeps the correlations between tick direction and waiting time. The construction uses a norm estimate for emitted wavepackets to control reverse ticks without relying on eigenvalue perturbation near a high-order exceptional point.
+
+## Learning route
+
+The educational anchor is Howard M. Wiseman and Gerard J. Milburn's *Quantum Measurement and Control* (Cambridge, 2010). The [source bridge](learning/anchor.md) connects its Lindblad and quantum-jump foundations to the clock model, translates notation, and identifies the steps supplied by this project.
+
+The [tutorial](learning/tutorial.md) follows the clock from an observed event to its precision and entropy account. The [30-milestone map](learning/milestones.md) records the underlying understanding targets, dependencies and source pointers. Specialists can use the reading table above to go directly to the exact statements and proofs. The [LLM reading guide](llms.txt) maps common questions to their authoritative files.
 
 ## Reproduce the checks
 

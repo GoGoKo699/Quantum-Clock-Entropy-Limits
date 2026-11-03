@@ -2,6 +2,15 @@
   "schema_version": 1,
   "sources": [
     {
+      "id": "wm10",
+      "citation_markdown": "Howard M. Wiseman and Gerard J. Milburn, **Quantum Measurement and Control**, Cambridge University Press (2010), ISBN 978-0-521-80442-4. [Publisher frontmatter](https://assets.cambridge.org/97805218/04424/frontmatter/9780521804424_frontmatter.pdf) · [Publisher contents](https://assets.cambridge.org/97805218/04424/toc/9780521804424_toc.pdf).",
+      "urls": [
+        "https://assets.cambridge.org/97805218/04424/frontmatter/9780521804424_frontmatter.pdf",
+        "https://assets.cambridge.org/97805218/04424/toc/9780521804424_toc.pdf"
+      ],
+      "use_and_scope": "The selected educational anchor for Lindblad dynamics, quantum jumps and monitoring. The [learning bridge](../learning/anchor.md) identifies the relevant sections and the additional renewal, resolvent and thermodynamic reasoning supplied by this project. The clock ceiling and finite-bias estimates are not attributed to this textbook."
+    },
+    {
       "id": "m25",
       "citation_markdown": "Florian Meier et al., **Precision is not limited by the second law of thermodynamics**, *Nature Physics* **21**, 1147–1152 (2025). [DOI:10.1038/s41567-025-02929-2](https://doi.org/10.1038/s41567-025-02929-2) · [Open full text](https://pmc.ncbi.nlm.nih.gov/articles/PMC12263443/) · [arXiv:2407.07948](https://arxiv.org/abs/2407.07948).",
       "urls": [
