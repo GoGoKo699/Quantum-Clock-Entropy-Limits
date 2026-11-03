@@ -147,7 +147,7 @@ Dependencies name earlier milestones whose ideas are used directly. The source p
 
 **Central question:** What does the inverse Fano factor measure, and what does it leave out of time estimation?
 
-**Understanding target:** Interpret $j$, the variance growth rate $D$, $F=D/j$, and $\mathcal P=j/D$. Keep the unit signed-count convention and the absence of a factor of two in $D$. Relate $\operatorname{Var}(N/j)$ to both precision and rate.
+**Understanding target:** Interpret $j$, the variance growth rate $D$, $F=D/j$, and $\mathcal P=j/D$. Keep the unit signed-count convention and the absence of a factor of two in $D$. Relate $\mathrm{Var}(N/j)$ to both precision and rate.
 
 **Dependencies and story role:** [M02](#m02), [M10](#m10). This connects individual records and block statistics to an operational long-time performance measure.
 
@@ -279,7 +279,7 @@ Dependencies name earlier milestones whose ideas are used directly. The source p
 
 **Central question:** What replaces unstable eigenvalue perturbation near the exceptional point?
 
-**Understanding target:** Explain the isometry from an initial state to its emitted wavepacket, the exponential-polynomial image, and the identity $S_0=W^\dagger tW$. Understand how the Laguerre compression bounds $\|\mathcal R_0\|_{1\to1}$ by $4d^2$ for every initial state.
+**Understanding target:** Explain the isometry from an initial state to its emitted wavepacket, the exponential-polynomial image, and the identity $S_0=W^\dagger tW$. Understand how the Laguerre compression bounds $`\|\mathcal R_0\|_{1\to1}`$ by $4d^2$ for every initial state.
 
 **Dependencies and story role:** [M06](#m06), [M08](#m08), [M09](#m09), [M20](#m20). This supplies uniform control when reverse jumps prepare a different endpoint.
 

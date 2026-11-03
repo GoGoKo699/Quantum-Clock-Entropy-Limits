@@ -6,36 +6,36 @@ How much reset bias is needed to sustain a precise quantum clock? Coherent dynam
 
 Let a finite-dimensional clock evolve under a time-independent Hermitian Hamiltonian and the jump pair
 
-$$
+```math
 J_+=\sqrt{\Gamma}\,|a\rangle\langle b|,
 \qquad
 J_-=\sqrt{\Gamma r}\,|b\rangle\langle a|,
 \qquad r=e^{-\Sigma}\in(0,1).
-$$
+```
 
 Each counted jump resets the **entire clockwork**. For the signed count $N(t)=N_+(t)-N_-(t)$, define the positive stationary current $j$, variance rate $D$ and precision by
 
-$$
+```math
 j=\lim_{t\to\infty}\frac{\mathbb E N(t)}{t},
 \qquad
-D=\lim_{t\to\infty}\frac{\operatorname{Var}N(t)}{t},
+D=\lim_{t\to\infty}\frac{\mathrm{Var}N(t)}{t},
 \qquad
 \mathcal P=\frac{j}{D}.
-$$
+```
 
 On the recurrent ticking sector, the [precision theorem](science/precision_bound.md) gives
 
-$$
+```math
 \boxed{\mathcal P\le e^{2\Sigma}\tanh(\Sigma/2).}
-$$
+```
 
 The bound is uniform over the Hilbert-space dimension, Hamiltonian spectrum, coherent couplings and complex phases. A [bounded-strength chain](science/achievability.md) achieves $\mathcal P\ge d$ at $\Sigma=3\log d+16\log 2$. Consequently, for desired precision $P\ge2$,
 
-$$
+```math
 \frac12\log P
 \le \Sigma_{\min}(P)
 \le 3\log\lceil P\rceil+16\log2.
-$$
+```
 
 Thus the optimal cost has logarithmic order in this architecture. The coefficients are not sharp. At fixed forward jump rate, the construction has net tick rate $j=\Theta(d^{-2})$: its increasing precision comes with slower operation.
 

@@ -27,48 +27,48 @@ The first two transitions establish the language. The last three require the add
 
 For the baseline clock, the unconditional state obeys
 
-$$
+```math
 \dot\rho=-i[H,\rho]+\mathcal D[J_+](\rho)+\mathcal D[J_-](\rho),
-$$
+```
 
 with the local dissipator convention
 
-$$
+```math
 \mathcal D[J](X)=JXJ^\dagger-\frac12\{J^\dagger J,X\}.
-$$
+```
 
 If the current normalized conditional state is $\rho_c$, the probability of one resolved event of sign $\sigma$ in a short interval is
 
-$$
+```math
 \Pr(dN_\sigma=1\mid\rho_c)
-=\operatorname{Tr}(J_\sigma^\dagger J_\sigma\rho_c)\,dt+o(dt).
-$$
+=\mathrm{Tr}(J_\sigma^\dagger J_\sigma\rho_c)\,dt+o(dt).
+```
 
 Conditional on that event, the normalized state becomes
 
-$$
+```math
 \rho_c\longmapsto
 \frac{J_\sigma\rho_cJ_\sigma^\dagger}
-{\operatorname{Tr}(J_\sigma^\dagger J_\sigma\rho_c)}.
-$$
+{\mathrm{Tr}(J_\sigma^\dagger J_\sigma\rho_c)}.
+```
 
 The [project's special choice](../science/model.md) is
 
-$$
+```math
 J_+=\sqrt\Gamma\,|a\rangle\langle b|,
 \qquad
 J_-=\sqrt{\Gamma r}\,|b\rangle\langle a|.
-$$
+```
 
 It gives
 
-$$
+```math
 J_+\rho_cJ_+^\dagger
 =\Gamma\langle b|\rho_c|b\rangle P_a,
 \qquad
 J_-\rho_cJ_-^\dagger
 =\Gamma r\langle a|\rho_c|a\rangle P_b.
-$$
+```
 
 Thus every positive event prepares $P_a$, and every negative event prepares $P_b$, whenever that outcome has nonzero probability. This is a statement about the entire clockwork. An event can be rank one on a small subsystem while preserving memory elsewhere; such an event does not meet this complete-reset premise.
 
@@ -78,29 +78,29 @@ The coefficient $\Gamma$ is not generally the observed positive-event rate. The 
 
 In the Hamiltonian baseline, define
 
-$$
+```math
 Q=J_+^\dagger J_++J_-^\dagger J_-
 =\Gamma(P_b+rP_a),
 \qquad
 G=-iH-\frac Q2,
 \qquad
 K_t=e^{tG}.
-$$
+```
 
 Starting from a normalized state $\rho_0$, the unnormalized state conditioned on no counted event is
 
-$$
+```math
 \widetilde\rho(t)=K_t\rho_0K_t^\dagger.
-$$
+```
 
 Its trace is the survival probability. Normalizing $\widetilde\rho(t)$ would give the conditional state, but would remove the survival weight needed to calculate waiting-time probabilities. The next-event densities are
 
-$$
+```math
 w_\sigma(t\mid\rho_0)
-=\operatorname{Tr}\!\left[
+=\mathrm{Tr}\!\left[
 J_\sigma^\dagger J_\sigma K_t\rho_0K_t^\dagger
 \right].
-$$
+```
 
 These formulas explain why the proof integrates a trace-decreasing evolution. The [active-sector argument](../science/precision_bound.md#1-active-subspace-and-eventual-absorption) supplies the additional fact that survival decays to zero. Without that step, an integral could retain a dark component and the inverse used later might not exist.
 
@@ -129,7 +129,7 @@ This is a dictionary for the repository, not a claim that the book uses these ex
 | $\mathcal L_0$ | The killed superoperator explicitly defined on its page: both signs are killed in the converse; the construction first uses the ideal $r=0$ generator. |
 | $\mathcal L_r$ in the construction | Evolution killed at positive ticks while retaining the negative jump dissipator. |
 | $\mathcal R$ or $R$ | The time integral of a stable killed semigroup, equivalently its negative-generator inverse. It has units of time. |
-| $C_{ij}$ | Integrated transfer intensity $\int_0^\infty\lvert\langle i\vert K_t\vert j\rangle\rvert^2dt$, with units of time. |
+| $C_{ij}$ | In the Hamiltonian baseline, the integrated transfer intensity $\int_0^\infty\lvert\langle i\vert K_t\vert j\rangle\rvert^2dt$, with units of time. The unital extension uses the integrated superoperator instead. |
 | $A$ | Dimensionless probability $\Gamma C_{ba}=\Pr(+\mid+)$. |
 
 ### Record, blocks, and precision
@@ -140,9 +140,9 @@ This is a dictionary for the repository, not a claim that the book uses these ex
 | $T,M,Y$ | Duration of a positive-tick block, number of its negative ticks, and net block reward $Y=1-M$. |
 | $\mu,q$ | $\mu=\mathbb ET$ and $q=\mathbb EY$ in the converse. |
 | $j$ | Long-time mean signed count per unit time; the theorem assumes $j>0$. |
-| $D$ or $v_N$ | Long-time variance growth rate $\lim_{t\to\infty}\operatorname{Var}N(t)/t$. No factor of two is included. |
+| $D$ or $v_N$ | Long-time variance growth rate $\lim_{t\to\infty}\mathrm{Var}N(t)/t$. No factor of two is included. |
 | $F,\mathcal P$ | Signed-count Fano factor $F=D/j$ and inverse-Fano precision $\mathcal P=j/D$. |
-| $v$ in the construction | The raw block second moment $\mathbb ET^2$; it is not $\operatorname{Var}T$ or the count variance rate. |
+| $v$ in the construction | The raw block second moment $\mathbb ET^2$; it is not $\mathrm{Var}T$ or the count variance rate. |
 | $d$ | Finite clock dimension; the long-time limit is taken at each fixed $d$ before discussing dimension scaling. |
 
 The symbols $D$ and $G$ also occur as temporary operators inside individual proofs. Their definitions at those locations control their meaning; the variance rate and amplitude generator in this dictionary must not be substituted mechanically into such local algebra.

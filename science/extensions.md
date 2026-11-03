@@ -8,39 +8,39 @@ The definitions of the thermodynamic interface and of precision are in [model.md
 
 Let $\mathcal K$ be a finite-dimensional operating Hilbert space. Let $\mathcal G$ be a time-independent Lindblad generator on $\mathcal B(\mathcal K)$ whose semigroup is completely positive, trace preserving, and unital. Equivalently, in addition to the Lindblad condition,
 
-$$
+```math
 \mathcal G(I_{\mathcal K})=0,
 \qquad
 \mathcal G^\dagger(I_{\mathcal K})=0.
-$$
+```
 
 The adjoint is taken in the Hilbert–Schmidt inner product. For normalized states $|a\rangle,|b\rangle\in\mathcal K$, not necessarily orthogonal, introduce the two counted channels
 
-$$
+```math
 J_+=\sqrt\Gamma\,|a\rangle\langle b|,
 \qquad
 J_-=\sqrt{\Gamma r}\,|b\rangle\langle a|,
 \qquad
-\Gamma>0,\quad 0<r<1.
-$$
+\Gamma>0,\quad 0 \lt r \lt 1.
+```
 
 The full generator and the generator conditioned on observing neither counted channel are
 
-$$
+```math
 \mathcal L=\mathcal G+\mathcal D[J_+]+\mathcal D[J_-],
 \qquad
 \mathcal L_0=\mathcal G-\frac12\{Q,\,\cdot\,\},
-$$
+```
 
 where
 
-$$
+```math
 P_a=|a\rangle\langle a|,
 \quad P_b=|b\rangle\langle b|,
 \quad Q=\Gamma(P_b+rP_a),
 \quad
 \mathcal D[J](X)=JXJ^\dagger-\frac12\{J^\dagger J,X\}.
-$$
+```
 
 Uncounted channels belonging to $\mathcal G$ remain active during a no-count interval. Thus $e^{t\mathcal L_0}$ is generally a completely positive map with several Kraus operators, rather than evolution by one non-Hermitian Hamiltonian.
 
@@ -48,35 +48,35 @@ Uncounted channels belonging to $\mathcal G$ remain active during a no-count int
 
 Assume that $\mathcal L_0$ is strictly stable on $\mathcal B(\mathcal K)$: every eigenvalue has negative real part. In finite dimension this implies an exponential bound
 
-$$
+```math
 \|e^{t\mathcal L_0}\|_{1\to1}\leq C e^{-\eta t}
-$$
+```
 
 for some $C,\eta>0$. In particular, a counted tick occurs almost surely from every state in the operating sector, and its waiting time has finite moments. Define the completely positive integrated map
 
-$$
+```math
 R=\int_0^\infty e^{t\mathcal L_0}\,dt=(-\mathcal L_0)^{-1}
-$$
+```
 
 and the probability
 
-$$
-A=\Gamma\operatorname{tr}[P_bR(P_a)]
+```math
+A=\Gamma\mathrm{tr}[P_bR(P_a)]
 =\Pr(+\mid+).
-$$
+```
 
 Assume also $A>0$. This is the positive-current condition for the paired-reset process. Stability alone does not imply it, as the disconnected-port example below demonstrates.
 
 **Extended bound.** For the signed count $N(t)=N_+(t)-N_-(t)$, the stationary long-time precision satisfies
 
-$$
+```math
 \mathcal P
-=\lim_{t\to\infty}\frac{\mathbb E N(t)}{\operatorname{Var}N(t)}
+=\lim_{t\to\infty}\frac{\mathbb E N(t)}{\mathrm{Var}N(t)}
 \leq
 \frac{(1-r)(1-rA)}{r(1-A)(1+r)}
 \leq
 \frac{1-r}{r^2(1+r)}.
-$$
+```
 
 Writing $\Sigma=-\log r$, the last expression is $e^{2\Sigma}\tanh(\Sigma/2)$. The bound is uniform in the dimension, the Hamiltonian part of $\mathcal G$, and the strength and form of its unital dissipative part. It does not assert that adding unital noise improves precision or that the bound is sharp.
 
@@ -86,43 +86,43 @@ Writing $\Sigma=-\log r$, the last expression is $e^{2\Sigma}\tanh(\Sigma/2)$. T
 
 Unitality and trace preservation give
 
-$$
+```math
 \mathcal L_0(I_{\mathcal K})
 =\mathcal L_0^\dagger(I_{\mathcal K})=-Q.
-$$
+```
 
 Taking inverses on the stable operating sector yields
 
-$$
+```math
 R(Q)=I_{\mathcal K},
 \qquad
 R^\dagger(Q)=I_{\mathcal K}.
-$$
+```
 
 Define the nonnegative endpoint matrix elements
 
-$$
-C_{ij}=\operatorname{tr}[P_iR(P_j)],\qquad i,j\in\{a,b\}.
-$$
+```math
+C_{ij}=\mathrm{tr}[P_iR(P_j)],\qquad i,j\in\{a,b\}.
+```
 
 The $P_a$ matrix element of the first inverse identity and the $P_a$ matrix element of the second identity are respectively
 
-$$
+```math
 \Gamma(C_{ab}+rC_{aa})=1,
 \qquad
 \Gamma(C_{ba}+rC_{aa})=1.
-$$
+```
 
 Hence $C_{ab}=C_{ba}$. The remaining normalization equation gives
 
-$$
+```math
 C=
 \frac1\Gamma
 \begin{pmatrix}
 (1-A)/r&A\\
 A&1-rA
 \end{pmatrix}.
-$$
+```
 
 This is an integrated reciprocity identity. It does not require time-reversal symmetry or equality of the two directional waiting-time densities at each time. Normalization of $a$ and $b$ suffices; orthogonality has not been used.
 
@@ -130,49 +130,49 @@ This is an integrated reciprocity identity. It does not require time-reversal sy
 
 For a unital completely positive map $\Phi_t=e^{t\mathcal G}$, the Kadison–Schwarz inequality gives
 
-$$
+```math
 \Phi_t(X)^\dagger\Phi_t(X)\leq\Phi_t(X^\dagger X).
-$$
+```
 
-Trace preservation therefore implies $\|\Phi_t(X)\|_2\leq\|X\|_2$. Differentiating at $t=0$ shows
+Trace preservation therefore implies $`\|\Phi_t(X)\|_2\leq\|X\|_2`$. Differentiating at $t=0$ shows
 
-$$
-\operatorname{Re}\langle X,-\mathcal G(X)\rangle_{\rm HS}\geq0.
-$$
+```math
+\mathrm{Re}\langle X,-\mathcal G(X)\rangle_{\rm HS}\geq0.
+```
 
 Consequently $\mathcal A=-\mathcal L_0$ is accretive:
 
-$$
-\operatorname{Re}\langle X,\mathcal A(X)\rangle_{\rm HS}
+```math
+\mathrm{Re}\langle X,\mathcal A(X)\rangle_{\rm HS}
 \geq
-\frac12\operatorname{tr}(X^\dagger QX+X^\dagger XQ)
+\frac12\mathrm{tr}(X^\dagger QX+X^\dagger XQ)
 \geq0.
-$$
+```
 
 Its inverse $R$ is accretive as well. Indeed, with $Y=R(X)$,
 
-$$
-\operatorname{Re}\langle X,R(X)\rangle_{\rm HS}
-=\operatorname{Re}\langle\mathcal A(Y),Y\rangle_{\rm HS}
+```math
+\mathrm{Re}\langle X,R(X)\rangle_{\rm HS}
+=\mathrm{Re}\langle\mathcal A(Y),Y\rangle_{\rm HS}
 \geq0.
-$$
+```
 
 For real $x,y$, substitute the Hermitian operator $D=xP_a+yP_b$. Since the endpoint matrix is real and symmetric,
 
-$$
-0\leq\operatorname{tr}[D R(D)]
+```math
+0\leq\mathrm{tr}[D R(D)]
 =\begin{pmatrix}x&y\end{pmatrix}
 C
 \begin{pmatrix}x\\y\end{pmatrix}.
-$$
+```
 
 Thus $C$ is positive semidefinite, even if $P_a,P_b$ are not independent. Its determinant gives
 
-$$
+```math
 (1-A)(1-rA)\geq rA^2,
 \qquad
 A\leq\frac1{1+r}.
-$$
+```
 
 ### 2.3 Regeneration and the signed reward bound
 
@@ -180,43 +180,43 @@ A positive counted jump resets the entire clockwork to $P_a$, while a negative c
 
 The sign transition probabilities are $\Pr(+\mid+)=A$ and $\Pr(-\mid-)=rA$. Therefore a block's duration $T$ and signed reward $Y$ satisfy
 
-$$
+```math
 \Pr(Y=1)=A,
 \qquad
 \Pr(Y=-m)=(1-A)(1-rA)(rA)^m,
 \quad m=0,1,\ldots.
-$$
+```
 
 Here $Y=-m$ corresponds to $m+1$ negative ticks followed by the terminating positive tick. In particular,
 
-$$
+```math
 \mu_Y=\mathbb EY=\frac{A(1-r)}{1-rA}>0,
 \qquad j=\frac{\mu_Y}{\mathbb ET}>0.
-$$
+```
 
 The geometric sign tail and stable no-count evolution give finite block moments. The renewal-reward variance formula then reads
 
-$$
+```math
 F=\mathcal P^{-1}
 =\frac{\mathbb E[(Y-jT)^2]}{\mu_Y}.
-$$
+```
 
 The physical duration obeys $jT\geq0$ and $\mathbb E(jT)=\mu_Y$. Relaxing to all nonnegative random variables $Z$ with this mean can only lower the residual second moment. Its minimum occurs at $Z=\mu_Y/A$ on $Y=1$ and $Z=0$ on $Y\leq0$. Hence
 
-$$
+```math
 \mathbb E[(Y-jT)^2]
 \geq
 \frac{rA(1-A)(1+r)}{(1-rA)^2}.
-$$
+```
 
 It follows that
 
-$$
+```math
 F\geq
 \frac{r(1+r)(1-A)}{(1-r)(1-rA)}
 \geq
 \frac{r^2(1+r)}{1-r},
-$$
+```
 
 where the last step uses $A\leq1/(1+r)$. No independence between waiting time and jump direction is assumed.
 
@@ -228,25 +228,25 @@ A permitted reduction to $\mathcal K$ must retain both endpoint states and make 
 
 A useful sufficient stability certificate is a positive-definite operator $S$ and a number $\epsilon>0$ such that
 
-$$
+```math
 \mathcal L_0^\dagger(S)\leq-\epsilon I_{\mathcal K}.
-$$
+```
 
 If $s_{\min}I\leq S\leq s_{\max}I$, then for any positive unnormalized no-count state $\rho_t$,
 
-$$
-\frac{d}{dt}\operatorname{tr}(S\rho_t)
-\leq-\epsilon\operatorname{tr}\rho_t
-\leq-\frac{\epsilon}{s_{\max}}\operatorname{tr}(S\rho_t).
-$$
+```math
+\frac{d}{dt}\mathrm{tr}(S\rho_t)
+\leq-\epsilon\mathrm{tr}\rho_t
+\leq-\frac{\epsilon}{s_{\max}}\mathrm{tr}(S\rho_t).
+```
 
 Thus
 
-$$
-\operatorname{tr}\rho_t
+```math
+\mathrm{tr}\rho_t
 \leq\frac{s_{\max}}{s_{\min}}
-e^{-\epsilon t/s_{\max}}\operatorname{tr}\rho_0,
-$$
+e^{-\epsilon t/s_{\max}}\mathrm{tr}\rho_0,
+```
 
 which proves exponential absorption. Taking $S=I$ immediately works when $Q$ is positive definite. More general certificates allow rank-deficient $Q$ and transport from internal states to the counted ports.
 
@@ -256,11 +256,11 @@ An invariant sector with no probability of reaching either counted channel is a 
 
 Hermitian dephasing operators give a unital generator of the form
 
-$$
+```math
 \mathcal G(X)=-i[H,X]
 +\sum_k\gamma_k\left(B_kXB_k-\frac12\{B_k^2,X\}\right),
 \qquad B_k=B_k^\dagger,\quad\gamma_k\geq0.
-$$
+```
 
 Random unitary jumps, $\sum_k\gamma_k(U_kXU_k^\dagger-X)$, also provide unital backgrounds. Both examples are covered whenever the operating-sector and absorption conditions hold.
 
@@ -272,42 +272,42 @@ Unitality is a statement about the action of a channel on the identity operator.
 
 Take $a=b=u$, operate on the one-dimensional space spanned by $u$, and set $\mathcal G=0$. Both counted jumps leave the state unchanged. If their output labels are separately recorded, they generate independent Poisson counts with rates $\Gamma$ and $\Gamma r$:
 
-$$
+```math
 \mathbb E N(t)=\Gamma(1-r)t,
 \qquad
-\operatorname{Var}N(t)=\Gamma(1+r)t.
-$$
+\mathrm{Var}N(t)=\Gamma(1+r)t.
+```
 
 Therefore
 
-$$
+```math
 \mathcal P=\frac{1-r}{1+r}=\tanh(\Sigma/2),
 \qquad
 A=\frac1{1+r}.
-$$
+```
 
 The transfer-probability ceiling is saturated, while the final precision ceiling is loose. This also shows why nonorthogonal endpoints are mathematically legitimate and why positivity of the signed current cannot be inferred solely from a geometrical transport picture. The labels are part of the measurement specification; combining the two outputs into one count changes the observable. A nonzero assigned rate affinity in this one-dimensional example is not, by itself, a derivation of a thermal entropy flow.
 
 ### 4.2 Orthogonal disconnected ports have zero net current
 
-Take orthogonal $a,b$, $\mathcal K=\operatorname{span}\{a,b\}$, and
+Take orthogonal $a,b$, $`\mathcal K=\mathrm{span}\{a,b\}`$, and
 
-$$
+```math
 H=E_aP_a+E_bP_b,
 \qquad \mathcal G=-i[H,\,\cdot\,].
-$$
+```
 
 The no-count generator is stable, but $A=0$. After a positive tick the next tick must be negative, and after a negative tick the next must be positive. In the stationary state,
 
-$$
+```math
 p_a=\frac1{1+r},\qquad p_b=\frac r{1+r},
-$$
+```
 
 and the forward and backward fluxes are equal. Along a stationary trajectory,
 
-$$
+```math
 N(t)=\mathbf1_{\{X_t=a\}}-\mathbf1_{\{X_0=a\}},
-$$
+```
 
 so the signed count remains bounded and has zero mean. There is no positive asymptotic net tick rate, and the positive-current Fano normalization used in the theorem does not apply.
 
@@ -317,9 +317,9 @@ This distinction is relevant to [Nishiyama and Hasegawa](../references/README.md
 
 If a counted jump instead has the form
 
-$$
+```math
 J_+=\sqrt\Gamma\,|a\rangle\langle b|\otimes I_A,
-$$
+```
 
 its rank is greater than one when the ancillary dimension exceeds one. Its output can retain a conditional ancillary state that depends on earlier evolution. Coupling that state back to the clockwork can correlate successive tick blocks. The independent-block step of the proof is then unavailable.
 
@@ -337,15 +337,15 @@ Extra **uncounted** channels are permitted when their combined generator is a ba
 
 The theorem concerns $N_+-N_-$, rather than an arbitrary function of the event record. Even the total count $K=N_++N_-$ distinguishes the two tasks. In the identical-endpoint example,
 
-$$
+```math
 \widehat t=\frac{K}{\Gamma(1+r)}
-$$
+```
 
 is unbiased and has variance
 
-$$
-\operatorname{Var}\widehat t=\frac{t}{\Gamma(1+r)}.
-$$
+```math
+\mathrm{Var}\widehat t=\frac{t}{\Gamma(1+r)}.
+```
 
 At $r=1$, the zero-affinity limit, the signed current has zero mean while this total-count estimator still carries timing information. This uses only the number of events, without borrowing timestamps from an external reference clock.
 

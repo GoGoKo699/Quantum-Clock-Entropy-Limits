@@ -6,22 +6,22 @@
 
 Let $\mathcal H$ be a finite-dimensional Hilbert space, $H=H^\dagger$ a time-independent Hamiltonian, and $|a\rangle,|b\rangle$ normalized states. In units with $\hbar=1$, the density operator evolves as
 
-$$
+```math
 \frac{d\rho}{dt}=\mathcal L(\rho)
 =-i[H,\rho]+\mathcal D[J_+](\rho)+\mathcal D[J_-](\rho),
-$$
+```
 
 where
 
-$$
+```math
 \mathcal D[J](X)=JXJ^\dagger-\frac12\{J^\dagger J,X\},
 \qquad
 J_+=\sqrt\Gamma\,|a\rangle\langle b|,
 \qquad
 J_-=\sqrt{\Gamma r}\,|b\rangle\langle a|.
-$$
+```
 
-The forward rate coefficient is $\Gamma>0$ and $0<r<1$. The dimensionless rate affinity is $\Sigma=-\log r>0$. These are jump-operator coefficients; the actual mean event rates also depend on the clock state.
+The forward rate coefficient is $\Gamma>0$ and $0 \lt r \lt 1$. The dimensionless rate affinity is $\Sigma=-\log r>0$. These are jump-operator coefficients; the actual mean event rates also depend on the clock state.
 
 A positive jump prepares $P_a=|a\rangle\langle a|$ and a negative jump prepares $P_b=|b\rangle\langle b|$, independently of the pre-jump state. This full reset is the structural assumption that makes successive blocks between positive ticks independent. If the physical clock includes an ancilla, the counted operators must reset it too. An operator of the form $|a\rangle\langle b|\otimes I_A$ is generally higher rank and is outside the main model.
 
@@ -33,18 +33,18 @@ The baseline generator has no other dissipators. The [unital extension](extensio
 
 The output is the signed unit count
 
-$$
+```math
 N(t)=N_+(t)-N_-(t).
-$$
+```
 
 Every forward event contributes one and every reverse event contributes minus one. Grouping ticks into larger units changes this convention and must change the corresponding entropy-per-unit accounting as well.
 
 For the Hamiltonian model, work on the cyclic space
 
-$$
+```math
 \mathcal H_{\mathrm{act}}
-=\operatorname{span}\{H^k|a\rangle,H^k|b\rangle:k\ge0\}.
-$$
+=\mathrm{span}\{H^k|a\rangle,H^k|b\rangle:k\ge0\}.
+```
 
 Its orthogonal complement is invariant under $H$ and cannot be reached after a reset. The [proof](precision_bound.md) shows that the no-count generator is exponentially stable on this active space. A running clock additionally requires positive stationary signed current. This excludes a disconnected interface whose forward and reverse counts merely alternate.
 
@@ -52,15 +52,15 @@ One may initialize the process immediately after a positive jump, in $P_a$. Any 
 
 For each fixed finite clock, define
 
-$$
+```math
 j=\lim_{t\to\infty}\frac{\mathbb E N(t)}{t}>0,
 \qquad
-D=\lim_{t\to\infty}\frac{\operatorname{Var}N(t)}{t},
+D=\lim_{t\to\infty}\frac{\mathrm{Var}N(t)}{t},
 \qquad
 F=\frac{D}{j},
 \qquad
 \mathcal P=F^{-1}.
-$$
+```
 
 Here $D$ is the variance growth rate, with **no factor of two** absorbed into its definition. $\mathcal P$ is dimensionless precision per net tick, sometimes called an inverse Fano factor. The long-time limit is taken before increasing the clock dimension.
 
@@ -72,14 +72,14 @@ Let $\Sigma_{\min}(P)$ denote the infimum of affinities among finite-dimensional
 
 The [converse](precision_bound.md) and [construction](achievability.md) prove, for $P\ge2$,
 
-$$
+```math
 \frac12\log P\le\Sigma_{\min}(P)
 \le3\log\lceil P\rceil+16\log2.
-$$
+```
 
-For the lower inequality, $\mathcal P\le e^{2\Sigma}\tanh(\Sigma/2)<e^{2\Sigma}$. For the upper inequality, choose the integer dimension $d=\lceil P\rceil$ in the explicit finite-bias family. These two statements optimize over the same clock class and use the same signed-current convention. They establish logarithmic order; the numerical coefficients and additive constant are not optimality claims.
+For the lower inequality, $\mathcal P\le e^{2\Sigma}\tanh(\Sigma/2) \lt e^{2\Sigma}$. For the upper inequality, choose the integer dimension $d=\lceil P\rceil$ in the explicit finite-bias family. These two statements optimize over the same clock class and use the same signed-current convention. They establish logarithmic order; the numerical coefficients and additive constant are not optimality claims.
 
-Multiplying $H$ and both jump rates by a common positive timescale factor multiplies $j,D$ equally. It preserves $F,\mathcal P,r$ and $\Sigma$. With $\Gamma=1$, the construction satisfies $\|H\|\le1/\sqrt3$ but $j=\Theta(d^{-2})$. Restoring a general $\Gamma$ gives $\|H\|\le\Gamma/\sqrt3$ and $j=\Theta(\Gamma d^{-2})$. Maintaining a fixed rate by increasing $\Gamma$ would therefore increase the dynamical strength resource.
+Multiplying $H$ and both jump rates by a common positive timescale factor multiplies $j,D$ equally. It preserves $F,\mathcal P,r$ and $\Sigma$. With $\Gamma=1$, the construction satisfies $`\|H\|\le1/\sqrt3`$ but $j=\Theta(d^{-2})$. Restoring a general $\Gamma$ gives $`\|H\|\le\Gamma/\sqrt3`$ and $j=\Theta(\Gamma d^{-2})$. Maintaining a fixed rate by increasing $\Gamma$ would therefore increase the dynamical strength resource.
 
 ## 4. Affinity and entropy are separate premises
 

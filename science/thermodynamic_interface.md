@@ -8,29 +8,29 @@ Throughout, entropy is measured in units of Boltzmann's constant and $\hbar=1$.
 
 The [clock model](model.md) has counted jumps
 
-$$
+```math
 J_+=\sqrt{\Gamma}\,|a\rangle\langle b|,
 \qquad
 J_-=\sqrt{\Gamma r}\,|b\rangle\langle a|,
 \qquad
 r=e^{-\Sigma}\in(0,1).
-$$
+```
 
 Its signed output is
 
-$$
+```math
 N(t)=N_+(t)-N_-(t),
 \qquad
 j=\lim_{t\to\infty}\frac{\mathbb E N(t)}{t}>0.
-$$
+```
 
 Here $\Sigma=\log(\Gamma_+/\Gamma_-)$ is a dimensionless **jump affinity**, regardless of how the generator is implemented. The mathematical result concerns the inverse Fano precision
 
-$$
+```math
 \mathcal P
 =\lim_{t\to\infty}
-\frac{\mathbb E N(t)}{\operatorname{Var}N(t)}.
-$$
+\frac{\mathbb E N(t)}{\mathrm{Var}N(t)}.
+```
 
 The generator alone does not identify bath temperatures, heat quanta, or the resource used to implement its Hamiltonian. For example, a coherent coupling may arise from a static resonant interaction or from an externally applied field in a rotating frame. These implementations can have different thermodynamic accounts despite sharing an effective equation.
 
@@ -42,16 +42,16 @@ Meier et al. describe a five-level ticking element, a one-excitation latch, and 
 
 We make the idealized interface assumptions explicit. Let its levels be
 
-$$
+```math
 |g\rangle,\quad|\ell\rangle,\quad|m\rangle,\quad|e\rangle,\quad|r\rangle.
-$$
+```
 
 The complete excitation cycle is
 
-$$
+```math
 g\longrightarrow\ell\longrightarrow m
 \longrightarrow e\longrightarrow r\longrightarrow g.
-$$
+```
 
 The $g\leftrightarrow\ell$ and $r\leftrightarrow g$ transitions couple coherently to opposite ends of the transport chain. The middle three transitions form the thermally driven reset path. We identify the effective endpoint states as $b=\ell$ and $a=r$ after eliminating $m$ and $e$.
 
@@ -59,93 +59,93 @@ The latch has a specific role: while one excitation is propagating through the c
 
 Choose equal bare endpoint energies
 
-$$
+```math
 E_\ell=E_r=\omega.
-$$
+```
 
 The cold reservoir, with inverse temperature $\beta_C$, mediates $\ell\leftrightarrow m$ and $e\leftrightarrow r$. The hot reservoir, with $\beta_H<\beta_C$, mediates $m\leftrightarrow e$. Define
 
-$$
+```math
 q_1=E_\ell-E_m>0,\qquad
 Q=E_e-E_m>0,\qquad
 q_2=E_e-E_r>0.
-$$
+```
 
 Endpoint resonance gives $q_1+q_2=Q$. In one forward reset, the interface releases $q_1$ and $q_2$ into the cold bath and absorbs $Q$ from the hot bath. Thus the reservoir entropy increment of a completed forward reset is
 
-$$
+```math
 \Sigma_{\mathrm{cycle}}
 =\beta_C(q_1+q_2)-\beta_HQ
 =(\beta_C-\beta_H)Q.
-$$
+```
 
 The reverse cycle carries the opposite entropy increment. With local detailed balance on each thermal edge,
 
-$$
+```math
 \frac{k_{\ell m}}{k_{m\ell}}=e^{\beta_Cq_1},
 \qquad
 \frac{k_{me}}{k_{em}}=e^{-\beta_HQ},
 \qquad
 \frac{k_{er}}{k_{re}}=e^{\beta_Cq_2}.
-$$
+```
 
 Consequently,
 
-$$
+```math
 \frac{k_{\ell m}k_{me}k_{er}}
      {k_{m\ell}k_{em}k_{re}}
 =e^{\Sigma_{\mathrm{cycle}}}.
-$$
+```
 
 A controlled Markovian elimination of the serial intermediate states yields effective forward and reverse reset rates with this ratio. In that effective model,
 
-$$
+```math
 \Sigma=\Sigma_{\mathrm{cycle}}
 =(\beta_C-\beta_H)Q.
-$$
+```
 
 This equality depends on the specified serial path and local detailed balance. It is not inferred merely from the notation $J_-=e^{-\Sigma/2}J_+^\dagger$.
 
 ## 3. Exact entropy accounting before elimination
 
-The serial interface has a useful conservation identity that does not assume instantaneous reset. Let $N_1$, $N_H$, and $N_2$ be the signed counts on $\ell\leftrightarrow m$, $m\leftrightarrow e$, and $e\leftrightarrow r$, respectively, positive along the forward path. Let $n_m,n_e\in\{0,1\}$ be the intermediate-state occupancies in a resolved jump trajectory.
+The serial interface has a useful conservation identity that does not assume instantaneous reset. Let $N_1$, $N_H$, and $N_2$ be the signed counts on $\ell\leftrightarrow m$, $m\leftrightarrow e$, and $e\leftrightarrow r$, respectively, positive along the forward path. Let $n_m,n_e\in\lbrace 0,1\rbrace$ be the intermediate-state occupancies in a resolved jump trajectory.
 
 Because no additional edge enters or leaves $m$ or $e$,
 
-$$
+```math
 \Delta n_m=N_1-N_H,\qquad
 \Delta n_e=N_H-N_2.
-$$
+```
 
 The reservoir entropy change is
 
-$$
+```math
 S_{\mathrm{env}}(t)
 =\beta_Cq_1N_1(t)-\beta_HQN_H(t)
  +\beta_Cq_2N_2(t).
-$$
+```
 
 Eliminating $N_H$ and $N_2$ gives the exact identity
 
-$$
+```math
 \boxed{
 S_{\mathrm{env}}(t)
 =\Sigma N_1(t)
  +(\beta_HQ-\beta_Cq_2)\Delta n_m(t)
  -\beta_Cq_2\Delta n_e(t).
 }
-$$
+```
 
 The last two terms are bounded interface-state terms at each fixed set of energy gaps and bath temperatures. Repeated unsuccessful excursions through part of the path do not create an unaccounted steady heat leak: their signed edge counts cancel except for these endpoint terms.
 
 The three signed edge currents therefore have the same long-time mean. In a stationary positive-current regime,
 
-$$
+```math
 \dot S_{\mathrm{env}}
 =\lim_{t\to\infty}
  \frac{\mathbb E S_{\mathrm{env}}(t)}{t}
 =\Sigma j.
-$$
+```
 
 The mean system entropy has no extensive growth in a finite stationary clock. Thus $\Sigma$ is also its steady entropy production per net completed reset, for this tightly coupled realization.
 
@@ -168,10 +168,10 @@ Local bath jumps are assigned the bare transition heats in this model. At finite
 
 A related obstruction explains why a single equilibrium reservoir is insufficient for the running orthogonal-port clock. A rank-one thermal jump that is an eigenoperator of the same Hamiltonian,
 
-$$
+```math
 [H,|a\rangle\langle b|]
 =\nu |a\rangle\langle b|,
-$$
+```
 
 forces distinct orthogonal $a$ and $b$ to be energy eigenstates. That Hamiltonian supplies no coherent route between these ports. With only the paired jumps, the two levels equilibrate and the signed stationary current vanishes. The two-temperature interface supplies the nonequilibrium bias needed for autonomous circulation. This argument concerns distinct orthogonal ports; it is not an argument about arbitrary overlapping reset states.
 
@@ -189,12 +189,12 @@ Complete reset also concerns all degrees of freedom that participate in subseque
 
 The [explicit construction](achievability.md) uses a real nearest-neighbor Hamiltonian with bounded coupling strengths in units of a fixed forward rate $\Gamma$. For dimension $d$, it attains
 
-$$
+```math
 \mathcal P\ge d,\qquad
 \Sigma=3\log d+16\log2,
 \qquad
 j=\Theta(\Gamma d^{-2}).
-$$
+```
 
 The logarithmic affinity cost is accompanied by a slower tick rate. It does not establish growing precision at fixed resolution, nor an optimal precision–rate tradeoff. Multiplying the Hamiltonian and all rates by a common factor changes the speed without changing $\Sigma$ or $\mathcal P$, but consumes a correspondingly larger dynamical scale.
 
