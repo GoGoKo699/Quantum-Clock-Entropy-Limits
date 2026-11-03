@@ -4,6 +4,12 @@
 
 The labels below identify the specific sources used in the scientific account. A citation supplies attribution or a stated premise; it does not transfer a theorem between different operational models. Machine-readable metadata are provided in [sources.json](sources.json).
 
+## WM10
+
+Howard M. Wiseman and Gerard J. Milburn, **Quantum Measurement and Control**, Cambridge University Press (2010), ISBN 978-0-521-80442-4. [Publisher frontmatter](https://assets.cambridge.org/97805218/04424/frontmatter/9780521804424_frontmatter.pdf) · [Publisher contents](https://assets.cambridge.org/97805218/04424/toc/9780521804424_toc.pdf).
+
+The selected educational anchor for Lindblad dynamics, quantum jumps and monitoring. The [learning bridge](../learning/anchor.md) identifies the relevant sections and the additional renewal, resolvent and thermodynamic reasoning supplied by this project. The clock ceiling and finite-bias estimates are not attributed to this textbook.
+
 ## M25
 
 Florian Meier et al., **Precision is not limited by the second law of thermodynamics**, *Nature Physics* **21**, 1147–1152 (2025). [DOI:10.1038/s41567-025-02929-2](https://doi.org/10.1038/s41567-025-02929-2) · [Open full text](https://pmc.ncbi.nlm.nih.gov/articles/PMC12263443/) · [arXiv:2407.07948](https://arxiv.org/abs/2407.07948).

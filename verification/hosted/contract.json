@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "expressions": [
+    {
+      "path": "README.md",
+      "index": 6,
+      "source_sha256": "bdc68ee50f8bac61f39ec2c32afa95874692b7b730feba31168defe606b1b309",
+      "expected_text": "P\u2264e2\u03a3tanh(\u03a3/2)."
+    },
+    {
+      "path": "README.md",
+      "index": 8,
+      "source_sha256": "4c08c4838b7db8808b32649506f0005eb3aada32e443671781926d85a07aa02a",
+      "expected_text": "\u03a3=3logd+16log2"
+    },
+    {
+      "path": "README.md",
+      "index": 10,
+      "source_sha256": "f7184ae2a9dac0e3918f12d07ee8972ea8ecfda6c87c44c21f87ca71dc13ba48",
+      "expected_text": "12logP\u2264\u03a3min(P)\u22643log\u2308P\u2309+16log2."
+    },
+    {
+      "path": "README.md",
+      "index": 11,
+      "source_sha256": "5f02342d6509f7cd16c4a204cc7546ded464237cc0e94b0fb5dbeaf7668e9b5b",
+      "expected_text": "j=\u0398(d\u22122)"
+    }
+  ]
+}

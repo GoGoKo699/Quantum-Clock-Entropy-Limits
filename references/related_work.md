@@ -2,17 +2,17 @@
 
 The central result is a dimension-independent ceiling on the precision of the signed net tick count for a single pair of complete rank-one resets. For normalized reset states $a,b$, arbitrary time-independent Hermitian $H$, and a stable active operating sector, the jumps
 
-$$
+```math
 J_+=\sqrt{\Gamma}|a\rangle\langle b|,
 \qquad
 J_-=\sqrt{\Gamma e^{-\Sigma}}|b\rangle\langle a|
-$$
+```
 
 obey
 
-$$
+```math
 \mathcal P\le e^{2\Sigma}\tanh(\Sigma/2).
-$$
+```
 
 Together with a controlled finite-affinity construction, this gives a logarithmic affinity cost for large target precision in the specified model. The coefficient in the optimal asymptotic cost remains open. The proof also has a [unital inter-tick extension](../science/extensions.md), subject to stability.
 
@@ -24,9 +24,9 @@ Meier et al., [M25](README.md#m25), study the same thermally paired reset link a
 
 Our result supplies the converse: at any fixed finite affinity, precision remains bounded uniformly over finite dimension and arbitrary Hermitian coherent dynamics. The construction here is useful because it provides explicit finite-affinity control and completes the order statement
 
-$$
+```math
 \Sigma_{\min}(P)=\Theta(\log P).
-$$
+```
 
 We do not attribute the exponential advantage, its coherent transport mechanism, or the biased-reset model to this work. We also do not infer that our coefficient $2$ in the precision ceiling is optimal.
 
@@ -38,9 +38,9 @@ The present theorem addresses the single-pair subclass and obtains an exponentia
 
 The relevant semi-Markov antecedent, Ertel, van der Meer, and Seifert [EVS22](README.md#evs22), imposes thermodynamic consistency conditions on the waiting kernels. The current proof instead extracts an additional constraint from the quantum generator. The probability $A=\Pr(+\mid+)$ that the next tick is positive following a positive reset satisfies
 
-$$
+```math
 A\le\frac{1}{1+e^{-\Sigma}}.
-$$
+```
 
 Positive ticks then define regeneration blocks whose signed rewards and durations may remain correlated. The fluctuation estimate treats those correlations directly. It is not a substitution of the quantum clock into a direction–time independent semi-Markov formula.
 
@@ -48,17 +48,17 @@ This distinction matters operationally. A freely assigned semi-Markov waiting la
 
 ## 3. Exceptional-point escape and finite-affinity recycling
 
-Holst, Blasi, and Khandelwal [HBK26](README.md#hbk26), Section VIII.A and Appendix H, derive the maximal-exceptional-point escape law for a resonant chain with one initial excitation, an empty residual bath, and irreversible terminal loss. At an order-$d$ exceptional point, it is Erlang with shape $2d-1$ and rate $\Gamma/d$. They also establish asymptotic escape optimality under a fixed sum of squared couplings. Their Discussion identifies autonomous recycling and continuously driven transport as extensions.
+Holst, Blasi, and Khandelwal [HBK26](README.md#hbk26), Section VIII.A and Appendix H, derive the maximal-exceptional-point escape law for a resonant chain with one initial excitation, an empty residual bath, and irreversible terminal loss. At an exceptional point of order $d$, it is Erlang with shape $2d-1$ and rate $\Gamma/d$. They also establish asymptotic escape optimality under a fixed sum of squared couplings. Their Discussion identifies autonomous recycling and continuously driven transport as extensions.
 
 We inherit and credit that ideal escape mechanism. The [achievability proof](../science/achievability.md) provides an explicit positive-coupling realization and then includes a nonzero backward reset. Its added steps control the killed evolution, block moments, and signed-count fluctuations uniformly in dimension. In particular,
 
-$$
-0<r\le\frac{1}{65536d^3}
+```math
+0\lt r\le\frac{1}{65536d^3}
 \quad\Longrightarrow\quad
 \mathcal P_r\ge d.
-$$
+```
 
-The relevant HBK26 chain proof assumes a maximal exceptional point and does not supply an explicit all-$d$ positive-coupling formula. That observation is a comparison with this paper, not a priority claim for the formula across the wider inverse-eigenvalue or non-Hermitian-chain literature.
+The relevant HBK26 chain proof assumes a maximal exceptional point and does not supply an explicit positive-coupling formula valid for every $d$. That observation is a comparison with this paper, not a priority claim for the formula across the wider inverse-eigenvalue or non-Hermitian-chain literature.
 
 The distinction between escape and a finite-affinity clock is substantive. Irreversible terminal loss describes one escape event. A running reset clock repeatedly recycles the excitation; a backward reset changes both its state and the signed reward. At $r=0$ the affinity is infinite. Thus the ideal Erlang law alone does not establish the finite-affinity logarithmic cost result.
 
@@ -84,9 +84,9 @@ For our model, every positive jump prepares the same full state $|a\rangle$, and
 
 If an event instead acts as
 
-$$
+```math
 J_+\otimes I_A
-$$
+```
 
 on a clock plus persistent memory $A$, it is generally higher rank on the full Hilbert space. The memory is not erased and the positive-tick block reduction need not apply. Our theorem does not rule out precision improvements from such an architecture or provide an entropy ceiling for it.
 
@@ -96,11 +96,11 @@ Multiple distinct reset pairs are another open direction. Each outcome can prepa
 
 The related source-balance analysis [SB](README.md#sb) supplies the bright/dark decomposition and the two contraction identities. For the no-count propagator $K(t)=\exp[(-iH-Q/2)t]$, where $Q=\Gamma(P_b+rP_a)$ and $P_i=|i\rangle\langle i|$, these are
 
-$$
+```math
 \int_0^\infty K(t)^\dagger QK(t)\,dt=I,
 \qquad
 \int_0^\infty K(t)QK(t)^\dagger\,dt=I
-$$
+```
 
 on a stable active sector. These are inherited ingredients, not new discoveries claimed here.
 

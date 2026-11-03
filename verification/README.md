@@ -36,19 +36,23 @@ The superoperators use column vectorization. For a matrix $X$, `vec(X)` stacks c
 
 For stationary cumulants, the script solves the normalized steady-state equation and its first tilted derivative. If $\mathcal L_s$ weights positive jumps by $e^s$ and negative jumps by $e^{-s}$, then
 
-$$
-j=\operatorname{tr}(\mathcal L'_0\rho_{\rm ss}),
+```math
+j=\mathrm{tr}(\mathcal L'_0\rho_{\rm ss}),
 \qquad
-D=\operatorname{tr}(\mathcal L''_0\rho_{\rm ss}+2\mathcal L'_0\rho'_0).
-$$
+D=\mathrm{tr}(\mathcal L''_0\rho_{\rm ss}+2\mathcal L'_0\rho'_0).
+```
 
 Here $\rho'_0$ solves
 
-$$
+```math
 \mathcal L\rho'_0=-(\mathcal L'_0-jI)\rho_{\rm ss},
-\qquad \operatorname{tr}\rho'_0=0.
-$$
+\qquad \mathrm{tr}\rho'_0=0.
+```
 
 There is no numerical differentiation of eigenvalues. The independent block calculation kills only positive ticks and retains negative jumps inside each interval, as derived in the [construction](../science/achievability.md).
 
 These checks do not establish a microscopic thermal realization, the optimal coefficient of the logarithmic law, a universal bound for other clock architectures, or actual hosted mathematical rendering. Those are separate statements with separate evidence.
+
+## Hosted mathematical display
+
+The [hosted-rendering check](hosted/README.md) compares the exact committed Markdown expressions with their actual GitHub rendering at desktop and narrow viewport widths. Its workflow retains the source inventory, comparison report and screenshots for a separate visual review. This checks presentation of the scientific account and learning route; it does not replace the analytical or numerical checks above.
